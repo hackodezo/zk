@@ -18,7 +18,6 @@ class Zklib
       {
         uid:       options[:data][0..3].split("\0").pop.to_i,
         id:        options[:data][4..7].split("\0").pop.to_i,
-        hacker:    options[:data],
         state:     BinData::Uint8le.read(options[:data][28]).snapshot,
         timestamp: decode_time({
           seconds: BinData::Uint32le.read(options[:data][29..-1]).snapshot
