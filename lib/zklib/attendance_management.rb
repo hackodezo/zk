@@ -1,4 +1,3 @@
-require 'byebug'
 class Zklib
   module AttendanceManagement
     # Get attendance list size
